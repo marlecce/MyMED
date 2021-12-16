@@ -30,7 +30,7 @@ beforeEach(async () => {
 afterAll(async () => {
   await mongo.stop();
   await mongoose.connection.close();
-});
+}, 10000);
 
 global.signin = async () => {
   const email = 'test@test.com';
